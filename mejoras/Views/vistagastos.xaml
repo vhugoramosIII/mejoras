@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mejoras.Views.vistagastos">
+    <ScrollView>
+        <StackLayout>
+            <ContentView>
+                <Image Source="LOGO.png" VerticalOptions="Center" HeightRequest="100" Aspect="AspectFit"/>
+            </ContentView>
+
+            <BoxView BackgroundColor="Orange" 
+                 HeightRequest="20"/>
+            <StackLayout HorizontalOptions="Center"/>
+
+            <Button 
+                Text="GENERAR NUEVO GASTO" 
+                    Clicked="generarreporte"
+                    Background="{StaticResource Primary}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+             
+            />
+
+            <StackLayout Spacing="3" Padding="15">
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="CAMCELAR" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="GUARDAR" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>

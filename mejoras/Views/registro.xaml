@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mejoras.Views.registro">
+    <ScrollView>
+        <StackLayout>
+            <ContentView>
+                <Image Source="LOGO.png" VerticalOptions="Center" HeightRequest="100" Aspect="AspectFit"/>
+            </ContentView>
+
+            <BoxView BackgroundColor="Orange" 
+                 HeightRequest="20"/>
+
+            <Label Text="REGISTRO" FontSize="40" Padding="30,10,30,10" HorizontalOptions="Center" FontAttributes="Bold,Italic" TextColor="Blue"/>
+            <ContentView>
+                <Image Source="jefe.JPG" VerticalOptions="Center" HeightRequest="100"/>
+            </ContentView>
+            <Label Text="Por favor llena los datos requeridos" FontSize="16" Padding="30,0,30,0" HorizontalOptions="Center" VerticalOptions="Fill" TextColor="DarkOrange"/>
+            <Frame Padding="75" >
+                <StackLayout VerticalOptions="Fill">
+                    <Entry Placeholder="Nombre" x:Name="nom"
+	               Keyboard="Text"
+	               IsEnabled="True"
+                   MaxLength="15"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                    TextColor="Black"
+                    />
+
+                    <Entry Placeholder="Apellido Paterno" x:Name="app"
+	               Keyboard="Text"
+	               IsEnabled="True"
+                   MaxLength="15"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                    TextColor="Black"       />
+
+                    <Entry Placeholder="Apellido Materno" x:Name="apm"
+	               Keyboard="Text"
+	               IsEnabled="True"
+                   MaxLength="15"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                    TextColor="Black"     />
+
+                    <Entry Placeholder="Telefono" x:Name="tele"
+	               Keyboard="Telephone"
+	               IsEnabled="True"
+                   MaxLength="10" 
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                    TextColor="Black"       />
+
+                    <Entry Placeholder="E-mail" x:Name="correo"
+	               Keyboard="Text"
+	               IsEnabled="True"
+                   MaxLength="30"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                    TextColor="Black"      />
+
+                    <Entry Placeholder="Contraseña" x:Name="contr"
+                       Keyboard="Text"
+                       IsEnabled="True"
+                       IsPassword="True"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkGray"
+                    TextColor="Black"   />
+
+                    <Entry Placeholder="nivel de usuario" x:Name="tipo"
+                       Keyboard="Numeric"
+                       IsEnabled="True"
+                       MaxLength="30"
+                       BackgroundColor="Beige"
+                       TextColor="Black"/>
+
+
+                    <Button
+                    Text="registrar"
+                    Clicked="Button_Clicked"
+                    FontAttributes="Bold"
+                     />
+                </StackLayout>
+            </Frame>
+            <Label FontSize="16" Padding="30,24,30,0"  VerticalOptions="EndAndExpand" TextColor="Orange" HorizontalOptions="CenterAndExpand">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="WWW.ARVIEN.COM" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

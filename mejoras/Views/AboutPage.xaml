@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mejoras.Views.AboutPage"
+             xmlns:vm="clr-namespace:mejoras.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="blanco">white</Color>
+            <Color x:Key="naranja">orange</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource blanco}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ContentView Padding="0,200,0,0" VerticalOptions="FillAndExpand" Margin="1">
+                    <Image Source="LOGO.png" VerticalOptions="CenterAndExpand" HeightRequest="100" Aspect="Fill" HorizontalOptions="Center"/>
+                </ContentView>
+
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" HorizontalOptions="Center">
+
+
+                
+                <Button
+                    Text="INICIAR SESIÓN" 
+                    Clicked="Boton_inicio"
+                    Background="{StaticResource Primary}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    />
+                <Button
+                    Text=" REGISTRARSE "
+                    Clicked="Boton_registro"
+                    Background="{StaticResource Primary}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    />
+
+               
+
+
+                <Label FontSize="16" Padding="30,24,30,0"  VerticalOptions="EndAndExpand" TextColor="{StaticResource naranja}" HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="www.ARVIEN.com" FontAttributes="Bold" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mejoras.Views.InicioMaestro">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="blanco">white</Color>
+            <Color x:Key="naranja">orange</Color>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout BackgroundColor="{StaticResource blanco}" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <ContentView Padding="0,0,0,0" VerticalOptions="FillAndExpand" Margin="1">
+                    <Image Source="LOGO.png" VerticalOptions="CenterAndExpand" HeightRequest="100" Aspect="Fill"/>
+                </ContentView>
+
+            </StackLayout>
+            <BoxView BackgroundColor="Orange" 
+                 HeightRequest="20"/>   
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10" HorizontalOptions="Center">
+                <ContentView>
+                    <Image Source="jefe.JPG" VerticalOptions="Center" HeightRequest="85"/>
+                </ContentView>
+                <Label Text="INICIAR SESION" FontSize="Title" Padding="30,10,30,10" HorizontalOptions="Center" TextColor="Orange"/>
+
+                <Entry Placeholder="     USUARIO     "
+                       x:Name="usrs"
+                       Keyboard="Text"
+                       IsEnabled="True"
+                       MaxLength="20"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkGray"
+                       TextColor="Black"
+                       />
+
+                <Entry Placeholder="CONTRASEÑA"
+                       x:Name="passwords"
+                       Keyboard="Text"
+                       IsEnabled="True"
+                       MaxLength="10"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkGray"
+                       TextColor="Black"
+                       />
+                <Button
+                    Text="INICIAR" 
+                    Clicked="INICIO_MAESTRO"
+                    Background="{StaticResource Primary}"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    />
+             
+
+                <Label FontSize="16" Padding="30,24,30,0"  VerticalOptions="EndAndExpand" TextColor="{StaticResource naranja}" HorizontalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="www.ARVIEN.com" FontAttributes="Bold" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

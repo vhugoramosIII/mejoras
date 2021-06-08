@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mejoras.Views.gastos">
+       
+
+
+
+
+    <ScrollView>
+
+
+
+        <StackLayout>
+            <ContentView>
+                <Image Source="LOGO.png" VerticalOptions="Center" HeightRequest="100" Aspect="AspectFit"/>
+            </ContentView>
+
+            <BoxView BackgroundColor="Orange" 
+                 HeightRequest="20"/>
+            <StackLayout HorizontalOptions="Center"/>
+            <Label Text="FECHA" TextColor="Orange" HorizontalOptions="Center" FontAttributes="Bold"/>
+           
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+               
+                
+            </Grid>
+
+            <Entry x:Name="idgasto" 
+                   Placeholder="Folio"
+                   IsEnabled="False"
+                   MaxLength="40"
+                   HorizontalOptions="Center"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                   TextColor="Black"
+                   
+                ></Entry>
+
+            <Entry x:Name="imeil"
+                   Placeholder="usuario"
+                   IsEnabled="True"
+                   Keyboard="Text"
+                   MaxLength="40"
+                   ReturnType="Next"
+                   HorizontalOptions="Center"
+                   BackgroundColor="Beige"
+                   PlaceholderColor="DarkGray"
+                   TextColor="Black"
+                   
+                ></Entry>
+                  
+                   
+
+            <Grid>
+            <DatePicker Date="2021/1/1" DateSelected="DatePicker_DateSelected"
+                        x:Name="fec"
+                        Background="BEIGE"  
+                        TextColor="Black"
+                        HorizontalOptions="CenterAndExpand">
+
+            </DatePicker>
+            </Grid>
+            <StackLayout>
+
+  
+                
+                
+                
+                <Label Text="TIPO DE GASTO:"
+                       TextColor="Orange"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"/>
+               
+                <Picker x:Name="tipdegas"
+                        SelectedIndexChanged="tipdegas_SelectedIndexChanged"
+                        ></Picker>
+     
+
+                <Grid> 
+                    <Entry Placeholder="       DESCRIPCIÓN       "
+                       x:Name="descr"
+                       Keyboard="Text"
+                       IsEnabled="True"
+                       MaxLength="400"
+                       IsVisible="true"
+                       ReturnType="Next"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkGray"
+                       TextColor="Black"
+                       
+                />
+                </Grid>
+                
+                
+                <Grid>
+                    <Label Text="FACTURA:" TextColor="Orange" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </Grid> 
+                <Picker x:Name="fact" SelectedIndexChanged="fact_SelectedIndexChanged" ></Picker>
+                
+                <Grid>
+                    <Entry Placeholder="         SUB TOTAL         "
+                       x:Name="subtotal"
+                       Keyboard="Numeric"
+                       IsEnabled="True"
+                       ReturnType="Next"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkRed"
+                       TextColor="Black"
+                       ></Entry>
+                </Grid>
+                <Grid>
+                    <Entry Placeholder="              TOTAL                 "      
+                       x:Name="total"
+                       Keyboard="Numeric"
+                       IsEnabled="False"
+                       ReturnType="Next"
+                       HorizontalOptions="Center"
+                       BackgroundColor="Beige"
+                       PlaceholderColor="DarkRed"
+                       TextColor="Black"
+                       ></Entry>
+                </Grid>
+                
+                
+                <StackLayout>
+                <Image Source="{Binding Fotico}" HorizontalOptions="Center"></Image>
+                </StackLayout>
+                <Button Text="TOMAR FOTO" Command="{Binding CapturarComando}" Grid.Row="1" HorizontalOptions="Center"></Button>
+
+
+                <Button Text="Guardar Reporte"
+                        Clicked="Button_Clicked"
+                        FontAttributes="Bold"
+                        ></Button>  
+              
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>
